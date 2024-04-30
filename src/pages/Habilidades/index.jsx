@@ -23,7 +23,6 @@ export default function Habilidades() {
                             </li>
                         ))
                     }
-                    {console.log(skills.map(el => {el}))}
                 </ul>
                 <ul>
                     {
@@ -34,7 +33,6 @@ export default function Habilidades() {
                             </li>
                         ))
                     }
-                    {console.log(skills.map(el => {el}))}
                 </ul>
             </div>
         </Wrapper>
