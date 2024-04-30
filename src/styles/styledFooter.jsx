@@ -2,15 +2,19 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div `
     background: #4361EE;
+
+    min-width: 100vh;
+    min-height: 6rem;
+    padding: 2rem;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-items: center;
-    padding: 2rem;
 
     h1 {
         max-width: 24rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: white;
     }
     ul {
