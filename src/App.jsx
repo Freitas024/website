@@ -1,23 +1,20 @@
-import Header from './pages/Header';
-import Home from './pages/Home';
-import Skills from './pages/Habilidades';
-import Projetos from './pages/Projetos';
-import Footer from './pages/Footer';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./pages/Header";
+import Home from "./pages/Home";
+import Sobre from "./pages/Sobre/index";
+import Footer from "./pages/Footer";
 
 export default function App() {
-  return(
+  return (
     <main>
-      <Header/>
-      <section className='section' id='Home'>
-        <Home/>
-      </section>
-      <Skills/>
-      <section className='section' id='Works'>
-        <Projetos/>
-      </section>
-      <section className='section' id='Footer'>
-        <Footer/>
-      </section>
+      <Router>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/sobre" element={<Sobre />} />
+        </Routes>
+        <Footer />
+      </Router>
     </main>
   );
 }
