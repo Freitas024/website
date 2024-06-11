@@ -1,8 +1,14 @@
 import UXanimation from "../../components/animationux";
-import Working from "../../components/working";
+import {
+  CounterAnimation,
+  CounterInformation,
+  Wrapper,
+  BlocoUm,
+  BlocoDois,
+} from "./Home";
 import { Cards, cursos } from "../../constants";
-import { Wrapper, Counter, Animation, CounterProject } from "./Home";
 import { useTypewriter } from "react-simple-typewriter";
+import Working from "../../components/working";
 
 export default function Home() {
   const [text] = useTypewriter({
@@ -12,51 +18,52 @@ export default function Home() {
     deleteSpeed: 40,
   });
   return (
-    <>
-      <Wrapper>
-        <Counter>
-          <h2>
-            Olá, Me chamo vinicius, <span>{text}</span>
-          </h2>
-          <h3>apaixonado por animações e design eficiente.</h3>
+    <Wrapper>
+      <BlocoUm>
+        <CounterInformation>
+          <h1>
+            Me chamo Vinicius, <span>{text}</span>
+          </h1>
+          <h2>Apaixonado por animações e design bonitos.</h2>
           <ul>
-            <li id={cursos.figma.id}>
-              {cursos.figma.texto}
-              <a href={cursos.figma.href} target="_blank">
-                {cursos.figma.id}
+            <li>
+              <p>
+                {cursos.figma.texto}
+                <a href={cursos.figma.href} target="_blank">
+                  {cursos.figma.id}
+                </a>
                 <img src={cursos.figma.icon} />
-              </a>
+              </p>
             </li>
-            <li id={cursos.uxDesign.id}>
-              {cursos.uxDesign.texto}
-              <a href={cursos.uxDesign.href} target="_blank">
-                {cursos.uxDesign.id}
-                <img src={cursos.figma.icon} />
-              </a>
+            <li>
+              <p>
+                {cursos.uxDesign.texto}
+                <a href={cursos.uxDesign.href} target="_blank">
+                  {cursos.uxDesign.id}
+                </a>
+                <img src={cursos.uxDesign.icon} />
+              </p>
             </li>
           </ul>
-        </Counter>
-        <Animation>
+        </CounterInformation>
+        <CounterAnimation>
           <UXanimation />
-        </Animation>
-      </Wrapper>
-      <CounterProject>
-        <h1>Projetos</h1>
+        </CounterAnimation>
+      </BlocoUm>
+      <BlocoDois>
+        <h1>projetos</h1>
         <ol>
-          {Cards.map((element) => (
-            <div key={element.id}>
-              <ul>
-                <Working />
-              </ul>
+          {Cards.map((elements) => (
+            <ul key={elements.id}>
               <main>
-                <li>{element.title}</li>
-                <span>{element.trabalho}</span>
-                <p>Projeto desenvolvido para font-end.</p>
+                <Working />
               </main>
-            </div>
+              <li>{elements.title}</li>
+              <p>{elements.trabalho}</p>
+            </ul>
           ))}
         </ol>
-      </CounterProject>
-    </>
+      </BlocoDois>
+    </Wrapper>
   );
 }

@@ -2,152 +2,144 @@ import styled from "styled-components";
 
 export const Wrapper = styled.main`
   background-color: none;
+`;
+
+export const BlocoUm = styled.div`
+  background-color: none;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-
-  padding: 100px 100px 12px 160px;
-`;
-
-export const Counter = styled.div`
-  background-color: none;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  height: 400px;
-  width: 600px;
-
-  padding: 0px 0px 0px 0px;
-  h2 {
-    font-size: larger;
-
-    margin: 80px 0px 6px 0px;
-  }
-
-  h2 span {
-    color: #731dd8;
-  }
-
-  h3 {
-    font-size: medium;
-
-    margin-bottom: 24px;
-  }
-
-  ul {
-    background-color: none;
-    list-style: none;
-  }
-  ul li {
-    font-size: small;
-    font-weight: 500;
-  }
-
-  ul li a {
-    margin-left: 6px;
-    text-decoration: none;
-    font-weight: 700;
-    color: black;
-  }
-
-  ul li img {
-    transform: rotate(45deg);
-  }
-`;
-
-export const Animation = styled.div`
-  height: 400px;
-  width: 500px;
-
-  background-color: none;
-`;
-
-export const CounterProject = styled.div`
-  background-color: none;
-
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  grid-template-columns: auto auto;
+  gap: 100px;
 
-  width: 219vh;
-  padding: 0px 0px 30px 0px;
+  height: 60vh;
+`;
+
+export const CounterAnimation = styled.div`
+  background-color: none;
+
+  width: 30vw;
+  height: 60vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const CounterInformation = styled.div`
+  background: none;
+
+  width: 40vw;
+  height: 60vh;
+
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-size: 18px;
+
+    margin: 6px 0px;
+
+    span {
+      color: #731dd8;
+      font-weight: 700;
+    }
+  }
+
+  h2 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  ul {
+    padding: 12px 0px;
+    li {
+      list-style-type: none;
+      margin: 6px 0px;
+      p {
+        font-size: 12px;
+        font-weight: 400;
+        :hover {
+          color: #276395;
+        }
+        a {
+          color: #363636;
+          text-decoration: none;
+          font-weight: 700;
+          padding: 0px 0px 0px 6px;
+        }
+        img {
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+`;
+
+export const BlocoDois = styled.div`
+  background: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 24px 0px;
 
   h1 {
     background-color: none;
-    color: #731dd8;
-
-    width: 160vh;
     padding: 12px;
-
+    width: 66vw;
+    color: #276395;
     font-size: x-large;
-    font-weight: 700;
   }
 
   ol {
     background-color: none;
 
+    width: 80vw;
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 100px;
-
-    width: 160vh;
-    padding: 12px;
-  }
-
-  ul {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
-
-    display: flex;
     align-items: center;
     justify-content: center;
-
-    height: 48vh;
+    grid-template-columns: auto auto;
+    gap: 60px 300px;
   }
-
-  li {
-    color: #276395;
-
-    font-size: large;
-    font-weight: 700;
-
-    list-style-type: none;
-  }
-
-  main {
+  ul {
     background-color: none;
 
+    height: 42vh;
     display: flex;
-    flex-direction: column;
     align-items: start;
     justify-content: space-around;
+    flex-direction: column;
+    main {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+      width: 24vw;
+      height: 30vh;
 
-    height: 12vh;
-    width: 48vh;
+      cursor: pointer;
+    }
 
-    margin: 24px 0px 0px 0px;
-  }
+    li {
+      color: #276395;
 
-  span {
-    color: #363636;
-    border-radius: 6px;
+      font-size: 18px;
+      font-weight: 600;
 
-    display: flex;
-    align-items: center;
+      list-style-type: none;
+    }
 
-    font-size: small;
-    font-weight: 400;
-  }
+    p {
+      color: rgba(54, 54, 54, 0.6);
 
-  p {
-    color: black;
+      font-size: 12px;
+      font-weight: 600;
 
-    font-size: large;
-    font-weight: 600;
+      list-style-type: none;
+    }
   }
 `;

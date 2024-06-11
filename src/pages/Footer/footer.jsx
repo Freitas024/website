@@ -1,62 +1,73 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.main`
+export const Wrapper = styled.div`
   background-color: #276395;
 
-  height: 124px;
-  padding-bottom: 30px;
+  height: 18vh;
 
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-around;
 
-  ol h2 {
-    color: #ffffff;
-
-    font-size: large;
-    font-weight: 600;
-    margin: 12px 6px;
-  }
-
   ol {
+    background-color: none;
+
     display: flex;
+    align-items: start;
     flex-direction: column;
-    align-items: flex-start;
-  }
+    justify-content: space-around;
 
-  ol p {
-    color: #ffffff;
+    width: 24vw;
+    height: 12vh;
 
-    font-size: small;
-    font-weight: 500;
-    margin: 6px;
+    h2 {
+      background: linear-gradient(to right, #ffb703, #fb8500);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: medium;
+      font-weight: 600;
+    }
+
+    div {
+      background-color: none;
+      width: 18vw;
+      height: 8vh;
+
+      display: flex;
+      align-items: start;
+      justify-content: space-around;
+      flex-direction: column;
+      p {
+        color: white;
+        font-size: small;
+        font-weight: 500;
+      }
+    }
   }
 
   ul {
     background-color: none;
 
-    width: 300px;
+    width: 18vw;
+    height: 6vh;
 
     display: flex;
     align-items: center;
     justify-content: space-around;
-  }
 
-  li {
-    color: #ffffff;
-    font-size: small;
-    font-weight: 600;
-
-    cursor: pointer;
-    list-style-type: none;
-
-    :hover {
-      color: #c4c4c4;
+    li {
+      list-style-type: none;
+      text-decoration: none;
+      :hover {
+        color: rgba(255, 255, 255, 0.6);
+        transition: 600ms;
+      }
     }
-  }
 
-  a {
-    color: #ffffff;
-    text-decoration: none;
+    a {
+      color: white;
+      font-size: small;
+      text-decoration: none;
+    }
   }
 `;

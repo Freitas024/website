@@ -5,8 +5,10 @@ export default function Footer() {
     <Wrapper>
       <ol>
         <h2>Obrigado por vê até aqui.</h2>
-        <p>viniciusfreitassilva1999@gmail.com</p>
-        <p>Criado por Vinicius Freitas.</p>
+        <div>
+          <p>viniciusfreitassilva1999@gmail.com</p>
+          <p>Criado por Vinicius Freitas.</p>
+        </div>
       </ol>
       <ul>
         <li>

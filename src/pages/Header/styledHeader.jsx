@@ -1,56 +1,82 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.nav`
-  background-color: none;
-
-  width: 100%;
-  height: 60px;
+export const Wrapper = styled.main`
+  background-color: white;
 
   display: flex;
   align-items: center;
   justify-content: space-around;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
+  height: 10vh;
 
-  img {
-    background-color: none;
+  ol {
+    button {
+      background: none;
+      border: none;
 
-    padding: 6px;
-  }
+      cursor: pointer;
+    }
+    ul {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
 
-  ul {
-    background-color: none;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-around;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+      position: absolute;
+      top: 12vh;
+      right: 18vw;
+      width: 12vw;
+      height: 24vh;
+      z-index: 2;
 
-    width: 30vh;
-    height: 30px;
-  }
+      li {
+        background-color: rgba(39, 99, 149, 0);
+        border-radius: 6px;
 
-  li {
-    display: block;
-    color: #363636;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10vw;
+        height: 5vh;
 
-    font-size: small;
-    font-weight: 600;
+        list-style-type: none;
 
-    list-style-type: none;
-    cursor: pointer;
+        :hover {
+          transition: 600ms;
+          color: rgba(39, 99, 149, 0.9);
+        }
 
-    :hover {
-      color: #276395;
+        a {
+          color: #363636;
+          text-decoration: none;
+        }
+      }
     }
   }
 
-  a {
-    color: #363636;
+  @media (width: 412px) {
+    ol {
+      ul {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
 
-    text-decoration: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+
+        position: absolute;
+        top: 12vh;
+        right: 12vw;
+        width: 30vw;
+        height: 24vh;
+        z-index: 2;
+      }
+    }
   }
 `;
