@@ -14,6 +14,12 @@ export const BlocoUm = styled.div`
   gap: 100px;
 
   height: 60vh;
+
+  @media (max-width: 412px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
 `;
 
 export const CounterAnimation = styled.div`
@@ -25,6 +31,17 @@ export const CounterAnimation = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 412px) {
+    background-color: none;
+
+    width: 50vw;
+    height: 50vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const CounterInformation = styled.div`
@@ -72,6 +89,54 @@ export const CounterInformation = styled.div`
         }
         img {
           transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  @media (max-width: 412px) {
+    width: 70vw;
+    height: 60vh;
+
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: 12px;
+
+      margin: 6px 0px;
+
+      span {
+        color: #731dd8;
+        font-weight: 700;
+      }
+    }
+
+    h2 {
+      font-size: 10px;
+      font-weight: 600;
+    }
+    ul {
+      padding: 12px 0px;
+      li {
+        list-style-type: none;
+        margin: 6px 0px;
+        p {
+          font-size: 10px;
+          font-weight: 400;
+          :hover {
+            color: #276395;
+          }
+          a {
+            color: #363636;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 0px 0px 0px 6px;
+          }
+          img {
+            transform: rotate(45deg);
+          }
         }
       }
     }
@@ -140,6 +205,70 @@ export const BlocoDois = styled.div`
       font-weight: 600;
 
       list-style-type: none;
+    }
+  }
+
+  @media (max-width: 412px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 24px 0px;
+
+    h1 {
+      background-color: none;
+      padding: 12px;
+      width: 66vw;
+      color: #276395;
+      font-size: medium;
+    }
+
+    ol {
+      background-color: none;
+
+      width: 80vw;
+
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: auto;
+      gap: 60px;
+    }
+    ul {
+      background-color: none;
+
+      height: 42vh;
+      display: flex;
+      align-items: start;
+      justify-content: space-around;
+      flex-direction: column;
+      main {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+        width: 80vw;
+        height: 24vh;
+
+        cursor: pointer;
+      }
+
+      li {
+        color: #276395;
+
+        font-size: 18px;
+        font-weight: 600;
+
+        list-style-type: none;
+      }
+
+      p {
+        color: rgba(54, 54, 54, 0.6);
+
+        font-size: 12px;
+        font-weight: 600;
+
+        list-style-type: none;
+      }
     }
   }
 `;
