@@ -70,4 +70,73 @@ export const Wrapper = styled.div`
       text-decoration: none;
     }
   }
+
+  @media (max-width: 1080px) {
+    background-color: #276395;
+
+    height: 18vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    ol {
+      background-color: none;
+
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-around;
+
+      width: 60vw;
+      height: 12vh;
+
+      h2 {
+        background: linear-gradient(to right, #ffb703, #fb8500);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: medium;
+        font-weight: 600;
+      }
+
+      div {
+        background-color: none;
+        width: 60vw;
+        height: 8vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        p {
+          color: white;
+          font-size: small;
+          font-weight: 500;
+        }
+      }
+    }
+
+    ul {
+      background-color: none;
+
+      width: 60vw;
+      height: 6vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      li {
+        list-style-type: none;
+        text-decoration: none;
+      }
+
+      a {
+        color: white;
+        font-size: small;
+        text-decoration: none;
+      }
+    }
+  }
 `;

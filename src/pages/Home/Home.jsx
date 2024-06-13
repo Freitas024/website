@@ -15,7 +15,8 @@ export const BlocoUm = styled.div`
 
   height: 60vh;
 
-  @media (max-width: 412px) {
+  @media (max-width: 1080px) {
+    background-color: none;
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
@@ -32,11 +33,12 @@ export const CounterAnimation = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 412px) {
+  @media (max-width: 1080px) {
     background-color: none;
+    margin-top: 48px;
 
-    width: 50vw;
-    height: 50vh;
+    width: 80vw;
+    height: 30vh;
 
     display: flex;
     align-items: center;
@@ -93,7 +95,9 @@ export const CounterInformation = styled.div`
       }
     }
   }
-  @media (max-width: 412px) {
+  @media (max-width: 1080px) {
+    background-color: none;
+    margin-top: -80px;
     width: 70vw;
     height: 60vh;
 
@@ -105,7 +109,7 @@ export const CounterInformation = styled.div`
     h1 {
       font-size: 12px;
 
-      margin: 6px 0px;
+      margin: 0px 0px 6px 0px;
 
       span {
         color: #731dd8;
@@ -125,9 +129,6 @@ export const CounterInformation = styled.div`
         p {
           font-size: 10px;
           font-weight: 400;
-          :hover {
-            color: #276395;
-          }
           a {
             color: #363636;
             text-decoration: none;
@@ -208,7 +209,7 @@ export const BlocoDois = styled.div`
     }
   }
 
-  @media (max-width: 412px) {
+  @media (max-width: 1080px) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -217,8 +218,8 @@ export const BlocoDois = styled.div`
 
     h1 {
       background-color: none;
-      padding: 12px;
-      width: 66vw;
+      padding: 6px 0px;
+      width: 84vw;
       color: #276395;
       font-size: medium;
     }

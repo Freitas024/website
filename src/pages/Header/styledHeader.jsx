@@ -58,7 +58,7 @@ export const Wrapper = styled.main`
     }
   }
 
-  @media (width: 412px) {
+  @media (max-width: 1080px) {
     ol {
       ul {
         background-color: white;
@@ -73,7 +73,7 @@ export const Wrapper = styled.main`
         position: absolute;
         top: 12vh;
         right: 12vw;
-        width: 30vw;
+        width: 48vw;
         height: 24vh;
         z-index: 2;
       }
