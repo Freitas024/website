@@ -71,7 +71,6 @@ export const About = styled.div`
 
   strong {
     color: rgba(133, 60, 217, 1);
-    ;
   }
 
   div {
@@ -125,8 +124,10 @@ export const Projects = styled.div`
 
   width: 36rem;
 
+  margin: 0px 0px 36px 0px;
+
   h3 {
-    color: ${({theme}) => theme.text};
+    color: ${({ theme }) => theme.text};
     font-size: medium;
     font-weight: 600;
   }
@@ -169,7 +170,7 @@ export const Projects = styled.div`
 
   div > a {
     background-color: ${({ theme }) => theme.body};
-    color: ${({theme}) => theme.text};
+    color: ${({ theme }) => theme.text};
     box-shadow: ${({ theme }) => theme.shadow};
     border: none;
     border-radius: 6px;
@@ -188,5 +189,91 @@ export const Projects = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+  }
+`;
+
+export const Contact = styled.div`
+  background-color: none;
+
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+
+  width: 36rem;
+
+  margin: 0px 0px 36px 0px;
+
+  h3 {
+    color: ${({ theme }) => theme.text};
+    font-size: medium;
+    font-weight: 600;
+  }
+
+  label {
+    color: ${({ theme }) => theme.text};
+    font-size: medium;
+    font-weight: 400;
+
+    margin: 18px 0px 12px 0px;
+
+  }
+
+  form {
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  form > input {
+    background-color: ${({theme}) => theme.body};
+    box-shadow: ${({theme}) => theme.shadow};
+    border: 1px solid #131313;
+    border-radius: 3px;
+
+    width: 36rem;
+    height: 2rem;
+    padding: 0px 6px;
+  }
+
+  form > textarea {
+    background-color: ${({theme}) => theme.body};
+    box-shadow: ${({theme}) => theme.shadow};
+    border: 1px solid #131313;
+    border-radius: 3px;
+
+    width: 36rem;
+    height: 12rem;
+    padding: 12px 6px;
+  }
+
+  form > button {
+    background-color: ${({ theme }) => theme.body};
+    color: #853cd9;
+    box-shadow: ${({ theme }) => theme.shadow};
+    border: none;
+    border-radius: 6px;
+
+    width: 6rem;
+
+    padding: 12px 12px;
+    margin: 24px 0px;
+
+    list-style: none;
+    text-decoration: none;
+
+    font-weight: 700;
+    font-size: small;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+    
   }
 `;

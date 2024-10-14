@@ -1,8 +1,9 @@
 import React from "react";
-import { Wrapper, Profile, About, Projects } from "../styles/Home";
+import { Wrapper, Profile, About, Projects, Contact } from "../styles/Home";
 import { icons, InfoWorks, links, Tech } from "../settings";
 
 export default function Home() {
+
   return (
     <Wrapper>
       <Profile>
@@ -84,6 +85,19 @@ export default function Home() {
           ))
         }
       </Projects>
+      <Contact>
+        <h3>Contato</h3>
+        <br />
+        <form>
+          <label>Nome</label>
+          <input type="text" placeholder="Seu nome aqui..."/>
+          <label>Email</label>
+          <input type="text" placeholder="Seu Email aqui..."/>
+          <label>Mensagem</label>
+          <textarea type="text" placeholder="Escreva uma mensagem aqui..."/>
+          <button onClick={() => alert("Função sendo implementada ainda, tente contato atráves das redes sociais, Obrigado pela atenção.")}>Enviar</button>
+        </form>
+      </Contact>
     </Wrapper>
   );
 }
