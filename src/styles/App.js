@@ -15,7 +15,7 @@ export const List = styled.ul`
     border: none;
     border-radius: 24px;
 
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -56,6 +56,10 @@ export const ButtonToggle = styled.button `
     font-weight: 600;
 
     cursor: pointer;
+
+    &:hover{
+        background-color: ${({theme}) => theme.hover};
+    }
 
     img{
         pointer-events: none;

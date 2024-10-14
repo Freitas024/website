@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+//Definindo animação!!!
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(190deg);
+  }
+`;
+
 
 export const Button = styled.button` 
 
@@ -20,5 +31,11 @@ export const Button = styled.button`
     justify-content: center;
 
     cursor: pointer;
+
+    transition: transform 0.3s ease;
+
+    &:hover {
+        animation: ${rotate} 1s linear;
+    }
 
 `;

@@ -9,7 +9,7 @@ import { icons } from "./settings";
 
 export default function App() {
 
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
   const [toggle, setToggle ] = useState(false);
 
   const handleToggle = () => {
