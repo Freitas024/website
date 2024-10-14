@@ -3,16 +3,16 @@ import { Wrapper, Profile, About, Projects, Contact } from "../styles/Home";
 import { icons, InfoWorks, links, Tech } from "../settings";
 
 export default function Home() {
+  //const [formulario, setFormulario] = useState({
+  //  name: "",
+  //  email: "",
+  //  message: "",
+  //});
 
   return (
     <Wrapper>
       <Profile>
-        <img
-          src="/Profile.jpg"
-          alt="profile"
-          width={72}
-          height={72}
-        />
+        <img src="/Profile.jpg" alt="profile" width={72} height={72} />
         <div>
           <h2>Vinicius de Freitas e Silva</h2>
           <h3>Desenvolvedor Front-end / UX/UI Designer</h3>
@@ -67,35 +67,45 @@ export default function Home() {
           <img src={Tech.Github} />
           <img src={Tech.Git} />
         </ul>
-        <br /> 
+        <br />
       </About>
       <Projects>
         <h3>Projetos</h3>
-        <br/>
-        {
-          InfoWorks.map((info, index) => (
-            <li key={index}>
-              <h3>{info.title}</h3>
-              <p>{info.description}</p>
-              <div>
-                <a href={info.github} target="_blank">Codigo <img src={icons.Eye}/></a>
-                <a href={info.view} target="_blank">website <img src={icons.Eye}/></a>
-              </div>
-            </li>
-          ))
-        }
+        <br />
+        {InfoWorks.map((info, index) => (
+          <li key={index}>
+            <h3>{info.title}</h3>
+            <p>{info.description}</p>
+            <div>
+              <a href={info.github} target="_blank">
+                Codigo <img src={icons.Eye} />
+              </a>
+              <a href={info.view} target="_blank">
+                website <img src={icons.Eye} />
+              </a>
+            </div>
+          </li>
+        ))}
       </Projects>
       <Contact>
         <h3>Contato</h3>
         <br />
         <form>
           <label>Nome</label>
-          <input type="text" placeholder="Seu nome aqui..."/>
+          <input type="text" placeholder="Seu nome aqui..." />
           <label>Email</label>
-          <input type="text" placeholder="Seu Email aqui..."/>
+          <input type="text" placeholder="Seu Email aqui..." />
           <label>Mensagem</label>
-          <textarea type="text" placeholder="Escreva uma mensagem aqui..."/>
-          <button onClick={() => alert("Função sendo implementada ainda, tente contato atráves das redes sociais, Obrigado pela atenção.")}>Enviar</button>
+          <textarea type="text" placeholder="Escreva uma mensagem aqui..." />
+          <button
+            onClick={() =>
+              alert(
+                "Função sendo implementada ainda, tente contato atráves das redes sociais, Obrigado pela atenção."
+              )
+            }
+          >
+            Enviar
+          </button>
         </form>
       </Contact>
     </Wrapper>

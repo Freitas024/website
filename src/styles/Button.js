@@ -6,7 +6,7 @@ const rotate = keyframes`
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(190deg);
+    transform: rotate(180deg);
   }
 `;
 

@@ -104,6 +104,10 @@ export const About = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
   }
 
   ul {
