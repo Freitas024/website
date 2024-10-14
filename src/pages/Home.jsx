@@ -7,7 +7,7 @@ export default function Home() {
     <Wrapper>
       <Profile>
         <img
-          src="../../public/Profile.jpg"
+          src="/Profile.jpg"
           alt="profile"
           width={72}
           height={72}
