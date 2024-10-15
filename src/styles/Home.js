@@ -232,6 +232,7 @@ export const Contact = styled.div`
   form > input {
     background-color: ${({theme}) => theme.body};
     box-shadow: ${({theme}) => theme.shadow};
+    color: ${({theme}) => theme.text};
     border: 1px solid #131313;
     border-radius: 3px;
 
@@ -243,6 +244,7 @@ export const Contact = styled.div`
   form > textarea {
     background-color: ${({theme}) => theme.body};
     box-shadow: ${({theme}) => theme.shadow};
+    color: ${({theme}) => theme.text};
     border: 1px solid #131313;
     border-radius: 3px;
 

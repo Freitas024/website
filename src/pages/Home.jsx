@@ -1,13 +1,44 @@
-import React from "react";
+import { useState } from "react";
 import { Wrapper, Profile, About, Projects, Contact } from "../styles/Home";
 import { icons, InfoWorks, links, Tech } from "../settings";
+import emailjs from "emailjs-com";
 
 export default function Home() {
-  //const [formulario, setFormulario] = useState({
-  //  name: "",
-  //  email: "",
-  //  message: "",
-  //});
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .send(
+        "service_grthw37",
+        "template_fgvjnhb",
+        formData,
+        "F01V-P3EOwyS8T9g2"
+      )
+      .then(
+        (result) => {
+          console.log("Email enviado com sucesso:", result.text);
+        },
+        (error) => {
+          console.error("Erro ao enviar o email:", error.text);
+        }
+      );
+
+    setFormData({ name: "", email: "", message: "" });
+  };
 
   return (
     <Wrapper>
@@ -90,22 +121,32 @@ export default function Home() {
       <Contact>
         <h3>Contato</h3>
         <br />
-        <form>
+        <form onSubmit={sendEmail}>
           <label>Nome</label>
-          <input type="text" placeholder="Seu nome aqui..." />
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            placeholder="Seu nome aqui..."
+            onChange={handleChange}
+          />
           <label>Email</label>
-          <input type="text" placeholder="Seu Email aqui..." />
+          <input
+            type="text"
+            name="email"
+            value={formData.email}
+            placeholder="Seu Email aqui..."
+            onChange={handleChange}
+          />
           <label>Mensagem</label>
-          <textarea type="text" placeholder="Escreva uma mensagem aqui..." />
-          <button
-            onClick={() =>
-              alert(
-                "Função sendo implementada ainda, tente contato atráves das redes sociais, Obrigado pela atenção."
-              )
-            }
-          >
-            Enviar
-          </button>
+          <textarea
+            type="text"
+            name="message"
+            value={formData.message}
+            placeholder="Escreva uma mensagem aqui..."
+            onChange={handleChange}
+          />
+          <button type="submit">Enviar</button>
         </form>
       </Contact>
     </Wrapper>
