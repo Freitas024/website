@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Wrapper, Profile, About, Projects, Contact } from "../styles/Home";
+import {
+  Wrapper,
+  Profile,
+  About,
+  Projects,
+  Contact,
+  Social,
+} from "../styles/Home";
 import { icons, InfoWorks, links, Tech } from "../settings";
 import emailjs from "emailjs-com";
 
@@ -149,6 +156,30 @@ export default function Home() {
           <button type="submit">Enviar</button>
         </form>
       </Contact>
+      <Social>
+        <h3>Redes Sociais</h3>
+        <br/>
+        <div>
+          <a href="https://github.com/freitas024" target="_blank">
+            <img src={icons.Github}/>
+            Github 
+          </a>
+          <a
+            href="https://www.linkedin.com/in/vinicius-de-freitas-e-silva-137a02295/"
+            target="_blank"
+          >
+            <img src={icons.Linkedin}/>
+            Linkedin 
+          </a>
+          <a
+            href="https://www.instagram.com/ux_vini/profilecard/?igsh=MXB4eHZuNmd0NHR1dA%3D%3D"
+            target="_blank"
+          >
+            <img src={icons.Instagram}/>
+            Instagram 
+          </a>
+        </div>
+      </Social>
     </Wrapper>
   );
 }

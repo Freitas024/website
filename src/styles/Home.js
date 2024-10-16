@@ -219,7 +219,6 @@ export const Contact = styled.div`
     font-weight: 400;
 
     margin: 18px 0px 12px 0px;
-
   }
 
   form {
@@ -230,9 +229,9 @@ export const Contact = styled.div`
   }
 
   form > input {
-    background-color: ${({theme}) => theme.body};
-    box-shadow: ${({theme}) => theme.shadow};
-    color: ${({theme}) => theme.text};
+    background-color: ${({ theme }) => theme.body};
+    box-shadow: ${({ theme }) => theme.shadow};
+    color: ${({ theme }) => theme.text};
     border: none;
     border-radius: 3px;
 
@@ -242,9 +241,9 @@ export const Contact = styled.div`
   }
 
   form > textarea {
-    background-color: ${({theme}) => theme.body};
-    box-shadow: ${({theme}) => theme.shadow};
-    color: ${({theme}) => theme.text};
+    background-color: ${({ theme }) => theme.body};
+    box-shadow: ${({ theme }) => theme.shadow};
+    color: ${({ theme }) => theme.text};
     border: none;
     border-radius: 3px;
 
@@ -278,8 +277,58 @@ export const Contact = styled.div`
     cursor: pointer;
 
     &:hover {
-      transform: translateY(-3px);
+      transform: translateY(-1px);
     }
-    
+  }
+`;
+
+export const Social = styled.div`
+  background-color: none;
+
+  width: 36rem;
+
+  padding: 12px;
+
+  h3 {
+    color: ${({ theme }) => theme.text};
+    font-size: medium;
+    font-weight: 600;
+  }
+
+  a {
+    background-color: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
+    box-shadow: ${({ theme }) => theme.shadow};
+    border: none;
+    border-radius: 6px;
+
+    width: 6rem;
+
+    padding: 6px 6px;
+
+    list-style: none;
+    text-decoration: none;
+
+    font-weight: 500;
+    font-size: small;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+  }
+
+  div {
+    background-color: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 12px 0px;
+
   }
 `;
