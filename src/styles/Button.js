@@ -6,7 +6,7 @@ const rotate = keyframes`
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(180deg);
+    transform: rotate(190deg);
   }
 `;
 
@@ -24,7 +24,7 @@ export const Button = styled.button`
 
     position: fixed;
     top: 42rem;
-    left: 3rem;
+    left: 12rem;
 
     display: flex;
     align-items: center;
@@ -32,7 +32,7 @@ export const Button = styled.button`
 
     cursor: pointer;
 
-    transition: transform 0.3s ease;
+    transition: transform 0s ease;
 
     &:hover {
         animation: ${rotate} 1s linear;
