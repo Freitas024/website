@@ -60,24 +60,17 @@ export default function Home() {
         <h3>Sobre mim</h3>
         <br />
         <p>
-          Olá, Me chamo Vinicius Freitas sou desenvolvedor de software com foco
-          em front-end e em UX/UI Design, Gosto muito da parte do front-end por
-          ser onde eu posso criar e desenvolver ideias criativas que ajude o
-          usuario na hora de ultilizar produtos e serviços no meio digital
-          criando uma experiência unica, agradavél e eficiênte para quem for
-          navegar na web.
+          Sou desenvolvedor de software com especialização em front-end e design de UX/UI, 
+          com paixão por criar soluções digitais criativas que aprimoram a experiência do usuário. 
+          Minha missão é transformar ideias em interfaces únicas, agradáveis e eficientes, que proporcionem u
+          ma navegação intuitiva e prazerosa.
           <br />
           <br />
-          Atualmente estou no 2° Perido do curso de{" "}
-          <strong>ADS - Análise e desenvolvimento de sistemas</strong> pela
-          faculdade, mas tenho contato com esse mundo da tecnologia desde 2020
-          que foi onde eu comecei a estudar sobre desenvolvimento de software
-          atualmente possuo conhecimentos em algumas tecnologias como{" "}
-          <strong>HTML, CSS, JAVASCRIPT, REACTJS</strong> também tenho
-          conhecimento em versionamento de codigo com{" "}
-          <strong>GIT e GITHUB</strong> e atualmente estou aprofundando meus
-          estudos com
-          <strong> NODEJS </strong>.
+          Atualmente cursando Análise e Desenvolvimento de Sistemas (ADS), porém minha jornada na área de tecnologia 
+          teve inicio em 2020. Desde então, venho aprimorando minhas habilidades em diversas ferramentas e tecnologias 
+          essenciais para o desenvolvimento de software. Sendo algumas delas <strong>HTML, CSS, JavaScript, Reactjs </strong> 
+          e mais recentemente <strong>NodeJS.</strong>Esse processo contínuo de aprendizado tem me permitido construir uma base 
+          sólida para o desenvolvimento de soluções inovadoras e eficientes.
         </p>
         <br />
         <h3>Certificados</h3>
