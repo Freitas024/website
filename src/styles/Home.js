@@ -233,7 +233,7 @@ export const Contact = styled.div`
     background-color: ${({theme}) => theme.body};
     box-shadow: ${({theme}) => theme.shadow};
     color: ${({theme}) => theme.text};
-    border: 1px solid #131313;
+    border: none;
     border-radius: 3px;
 
     width: 36rem;
@@ -245,7 +245,7 @@ export const Contact = styled.div`
     background-color: ${({theme}) => theme.body};
     box-shadow: ${({theme}) => theme.shadow};
     color: ${({theme}) => theme.text};
-    border: 1px solid #131313;
+    border: none;
     border-radius: 3px;
 
     width: 36rem;
