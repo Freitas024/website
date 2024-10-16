@@ -62,14 +62,14 @@ export default function Home() {
         <p>
           Sou desenvolvedor de software com especialização em front-end e design de UX/UI, 
           com paixão por criar soluções digitais criativas que aprimoram a experiência do usuário. 
-          Minha missão é transformar ideias em interfaces únicas, agradáveis e eficientes, que proporcionem u
-          ma navegação intuitiva e prazerosa.
+          Minha missão é transformar ideias em interfaces únicas, agradáveis e eficientes, que proporcionem 
+          uma navegação intuitiva e prazerosa.
           <br />
           <br />
           Atualmente cursando Análise e Desenvolvimento de Sistemas (ADS), porém minha jornada na área de tecnologia 
           teve inicio em 2020. Desde então, venho aprimorando minhas habilidades em diversas ferramentas e tecnologias 
           essenciais para o desenvolvimento de software. Sendo algumas delas <strong>HTML, CSS, JavaScript, Reactjs </strong> 
-          e mais recentemente <strong>NodeJS.</strong>Esse processo contínuo de aprendizado tem me permitido construir uma base 
+          e mais recentemente <strong>NodeJS.</strong> Esse processo contínuo de aprendizado tem me permitido construir uma base 
           sólida para o desenvolvimento de soluções inovadoras e eficientes.
         </p>
         <br />

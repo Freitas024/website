@@ -18,7 +18,7 @@ export const lightTheme = {
 };
 export const darkTheme = {
   body: '#212529',
-  text: '#f1faee',
+  text: '#F5F5F5',
   title: '#e9ecef',
   inverse: 'FFFFFF',
   shadow: '0px 0px 3px 0px rgba(250, 250, 250, .2)',
