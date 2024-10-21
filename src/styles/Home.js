@@ -45,6 +45,7 @@ export const Profile = styled.div`
     font-size: small;
     font-weight: 500;
   }
+
 `;
 
 export const About = styled.div`
@@ -329,6 +330,5 @@ export const Social = styled.div`
     justify-content: space-around;
 
     padding: 12px 0px;
-
   }
 `;

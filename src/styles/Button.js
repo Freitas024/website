@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 //Definindo animação!!!
 const rotate = keyframes`
@@ -10,32 +10,29 @@ const rotate = keyframes`
   }
 `;
 
+export const Button = styled.button`
+  background-color: ${({ theme }) => theme.body};
 
-export const Button = styled.button` 
+  width: 42px;
+  height: 42px;
 
-    background-color: ${({ theme }) => theme.body};
+  border: none;
+  border-radius: 100%;
+  box-shadow: ${({ theme }) => theme.shadow};
 
-    width: 3rem;
-    height: 3rem;
+  position: fixed;
+  top: 90%;
+  left: 3%;
 
-    border: none;
-    border-radius: 100%;
-    box-shadow: ${({theme}) => theme.shadow};
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    position: fixed;
-    top: 42rem;
-    left: 12rem;
+  cursor: pointer;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  transition: transform 0s ease;
 
-    cursor: pointer;
-
-    transition: transform 0s ease;
-
-    &:hover {
-        animation: ${rotate} 1s linear;
-    }
-
+  &:hover {
+    animation: ${rotate} 1s linear;
+  }
 `;
