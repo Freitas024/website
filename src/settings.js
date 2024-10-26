@@ -32,10 +32,10 @@ export const InfoWorks = [
         view: "https://oscorp-system.vercel.app/"
     },
     {
-        title: "BarbeariaShop",
-        description: "Uma landing Page de uma barbearia ultilizando só html e css puro.",
-        github: "https://github.com/Freitas024/BarbeariaShop.git",
-        view: "https://github.com/Freitas024/BarbeariaShop.git"
+        title: "Todo-List",
+        description: "TODOLIST ultilizando React.js e styled-componente.",
+        github: "https://github.com/Freitas024/TODOLIST.git",
+        view: "https://todolist-psi-pearl.vercel.app/"
     },
     {
         title: "Pesquisa de Animais",
