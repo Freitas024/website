@@ -33,9 +33,9 @@ export const InfoWorks = [
     },
     {
         title: "Todo-List",
-        description: "TODOLIST ultilizando React.js e styled-componente.",
-        github: "https://github.com/Freitas024/TODOLIST.git",
-        view: "https://todolist-psi-pearl.vercel.app/"
+        description: "todoList em estilo cartoon ultilizando styled-components no react.js",
+        github: "https://github.com/Freitas024/todolist",
+        view: "https://todolist-4jkveo6od-freitas024s-projects.vercel.app/"
     },
     {
         title: "Pesquisa de Animais",
