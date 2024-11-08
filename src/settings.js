@@ -29,18 +29,15 @@ export const InfoWorks = [
         title: "Oscorp-System",
         description: "Um sistema de cadastro de funcionarios com funcionalidade de Editar e Excluir ultilizando o localStorage do navegador.",
         github: "https://github.com/Freitas024/Oscorp-System.git",
-        view: "https://oscorp-system.vercel.app/"
     },
     {
         title: "Todo-List",
         description: "todoList em estilo cartoon ultilizando styled-components no react.js",
         github: "https://github.com/Freitas024/todolist",
-        view: "https://todolist-4jkveo6od-freitas024s-projects.vercel.app/"
     },
     {
-        title: "Pesquisa de Animais",
-        description: "Aplicação web de um website que faz a filtragem de animais por palavras chaves ultilizando somente HTML, CSS e JAVASCRIPT",
-        github: "https://github.com/Freitas024/Animals-pesquisa.git",
-        view: "https://animals-pesquisa.vercel.app/"
+        title: "Pokedex",
+        description: "Pokedex com filtragem de pokemons através de nome e o tipo do pokemon em tempo real, consumida atráves da API pokeAPI. Trabalho da faculdade",
+        github: "https://github.com/Freitas024/pokedex.git",
     }
 ]

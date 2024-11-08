@@ -111,9 +111,6 @@ export default function Home() {
               <a href={info.github} target="_blank">
                 Codigo <img src={icons.Eye} />
               </a>
-              <a href={info.view} target="_blank">
-                website <img src={icons.Eye} />
-              </a>
             </div>
           </li>
         ))}
