@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { GlobalStyles, lightTheme, darkTheme } from "./styles/GlobalStyles";
-import Home from "./pages/Home";
+import Home from "./pages/Home/index";
 import { ThemeProvider } from "styled-components";
 import { List, ButtonToggle } from './styles/App';
 import { Button } from './styles/Button';

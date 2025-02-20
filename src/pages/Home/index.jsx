@@ -6,8 +6,8 @@ import {
   Projects,
   Contact,
   Social,
-} from "../styles/Home";
-import { icons, InfoWorks, links, Tech } from "../settings";
+} from "../../styles/Home";
+import { icons, InfoWorks, links, Tech } from "../../settings";
 import emailjs from "emailjs-com";
 
 export default function Home() {

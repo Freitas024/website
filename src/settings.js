@@ -26,18 +26,18 @@ export const Tech = {
 
 export const InfoWorks = [
     {
-        title: "Oscorp-System",
-        description: "Um sistema de cadastro de funcionarios com funcionalidade de Editar e Excluir ultilizando o localStorage do navegador.",
-        github: "https://github.com/Freitas024/Oscorp-System.git",
+        title: "Perguntas e respostas",
+        description: "Sistemas de perguntas e respostas, onde o usúario pode fazer perguntas e responder perguntas de outros usúarios, ultilizei o MySQL para o banco de dados, node.js para o backend e ejs para o frontend",
+        github: "https://github.com/Freitas024/GuiaPerguntas",
     },
     {
-        title: "Todo-List",
-        description: "todoList em estilo cartoon ultilizando styled-components no react.js",
-        github: "https://github.com/Freitas024/todolist",
+        title: "Clinica Freitas",
+        description: "Um sistema de gerenciamente de clinica médica, onde tem a opção de cadastrar médicos e pacientes, os pacientes podem verificar as consultas marcadas. para armazenar os dados foi ultilizado o localStorange do navegador.",
+        github: "https://github.com/Freitas024/Clinica-Freitas",
     },
     {
-        title: "Pokedex",
-        description: "Pokedex com filtragem de pokemons através de nome e o tipo do pokemon em tempo real, consumida atráves da API pokeAPI. Trabalho da faculdade",
-        github: "https://github.com/Freitas024/pokedex.git",
+        title: "chat em tempo real",
+        description: "Um sistema de chat em tempo real, onde o usúario pode se conectar com outros usúarios e conversar, ultilizei o socket.io para a comunicação em tempo real.",
+        github: "https://github.com/Freitas024/chat",
     }
 ]
