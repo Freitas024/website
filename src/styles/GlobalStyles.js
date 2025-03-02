@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
   
 `;
 export const lightTheme = {
-  body: '#FFFFFF',
+  body: '#F5F5F5',
   text: '#212529',
   title: '#212529',
   inverse: '#212529',

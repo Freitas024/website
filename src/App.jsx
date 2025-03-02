@@ -21,7 +21,7 @@ export default function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/works" element={<Works />} />
         </Routes>
-        { toggle && <ToggleConfig />}
+        { toggle && <ToggleConfig setIsDarkTheme={setIsDarkTheme}/>}
       </ThemeProvider>
     </Router>
   );
