@@ -1,11 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { HomeContainer, ProfileContainer, InfoContainer } from "./styles";
 import { Check } from "../../components/Icons/check";
+import { Download } from "../../components/Icons/Download";
+import { useDownload } from "../../hooks/useDownload";
 import { Icon } from "@iconify/react";
 
 export default function Home() {
 
     const [user, setUser] = useState("");
+    const { downloadFile } = useDownload();
+    const linkRef = useRef(null);
     
     useEffect(() => { 
         fetch("https://api.github.com/users/Freitas024")
@@ -14,6 +18,13 @@ export default function Home() {
         .catch(error => console.log("Erro: " + error));
 
     }, []);
+
+    const handleDownload = (e) => {
+        e.preventDefault();
+        const downloadURL = "/Curriculum.pdf"
+        downloadFile(downloadURL, "ViniciusFreitas.pdf");
+        console.log("Download");
+    }
 
     return(
         <HomeContainer>
@@ -28,11 +39,17 @@ export default function Home() {
                 <h4>Quem sou ?</h4>
                 <br/>
                 <p>
-                    Desenvolvedor de software com foco em Front-end e UX/UI Designer. Apaixonado por tecnologia e inovação,
-                    
-                    
+                    Desenvolvedor de software com foco em Front-end e UX/UI Design. Apaixonado por tecnologia e inovação,
+                    busco sempre aprender e me aprimorar em novas tecnologias e metodologias de desenvolvimento de software,
+                    com o objetivo de entregar produtos de qualidade e que atendam as necessidades dos usuários. Atualmente 
+                    estou cursando Análise e Desenvolvimento de Sistemas e possuo experiência em desenvolvimento de aplicações
+                    web e mobile com tecnologias como <span>HTML, CSS, JavaScript, React, Node.js, MongoDB e MySQL.</span>
                 </p>
                 <br/>
+                <button onClick={handleDownload}>
+                    <h3>Curriculum</h3>
+                    <Download />
+                </button>
                 <h4>Certificados</h4>
                 <ul>
                     <li onClick={() => window.open("https://cursos.alura.com.br/degree/certificate/a84be5bb-1a01-4b18-a3c0-d1f7675a4248?lang=pt_BR", "_blank")}>

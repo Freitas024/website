@@ -64,6 +64,26 @@ export const InfoContainer = styled.div`
         }
     }
 
+    button {
+        background-color: ${({theme}) => theme.body};
+        color: ${({theme}) => theme.text};
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: none;
+        box-shadow: ${({theme}) => theme.shadow};
+        margin: 0px 0px 24px 0px;
+        padding: 12px 24px;
+        white-space: nowrap;   
+        cursor: pointer;
+
+        h3 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
     ul {
         width: 100%;
         display: flex;
