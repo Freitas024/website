@@ -137,3 +137,27 @@ export const InfoContainer = styled.div`
     }
 
 `;
+
+export const ProjectContainer = styled.div `
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 30rem;
+    width: 36%;
+
+    h4 {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: larger;
+        font-weight: bolder;
+        width: 100%;
+    }
+
+    p {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+`;

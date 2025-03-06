@@ -1,15 +1,15 @@
-import { useState, useEffect, useRef } from "react";
-import { HomeContainer, ProfileContainer, InfoContainer } from "./styles";
+import { useState, useEffect } from "react";
+import { HomeContainer, ProfileContainer, InfoContainer, ProjectContainer } from "./styles";
 import { Check } from "../../components/Icons/check";
 import { Download } from "../../components/Icons/Download";
 import { useDownload } from "../../hooks/useDownload";
 import { Icon } from "@iconify/react";
+import Highlights from "../../components/ProjetosDestaque";
 
 export default function Home() {
 
     const [user, setUser] = useState("");
     const { downloadFile } = useDownload();
-    const linkRef = useRef(null);
     
     useEffect(() => { 
         fetch("https://api.github.com/users/Freitas024")
@@ -43,7 +43,7 @@ export default function Home() {
                     busco sempre aprender e me aprimorar em novas tecnologias e metodologias de desenvolvimento de software,
                     com o objetivo de entregar produtos de qualidade e que atendam as necessidades dos usuários. Atualmente 
                     estou cursando Análise e Desenvolvimento de Sistemas e possuo experiência em desenvolvimento de aplicações
-                    web e mobile com tecnologias como <span>HTML, CSS, JavaScript, React, Node.js, MongoDB e MySQL.</span>
+                    web com tecnologias como <span>HTML, CSS, JavaScript, React, Node.js, MongoDB e MySQL.</span>
                 </p>
                 <br/>
                 <button onClick={handleDownload}>
@@ -90,6 +90,10 @@ export default function Home() {
                     </li>
                 </ol>
             </InfoContainer>
+            <ProjectContainer>
+                <h4>Projetos principais</h4>
+                <Highlights />
+            </ProjectContainer>
         </HomeContainer>
     )
 }
