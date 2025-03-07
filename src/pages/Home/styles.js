@@ -146,7 +146,7 @@ export const ProjectContainer = styled.div `
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    margin-bottom: 6rem;
     height: 30rem;
     width: 36%;
 
@@ -161,11 +161,14 @@ export const ProjectContainer = styled.div `
     button {
         background: none;
         border: none;
-        margin: 12px 0px 24px 0px;
-        padding: 12px;
+        border-radius: 6px;
+        margin: 24px 0px 24px 0px;
+        padding: 6px 12px;
         font-family: 'Montserrat', sans-serif;
         font-size: small;
         font-weight: 400;
         color: #7543fe;
+        cursor: pointer;
+        
     }
 `;

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { HomeContainer, ProfileContainer, InfoContainer, ProjectContainer } from "./styles";
 import { Check } from "../../components/Icons/check";
 import { Download } from "../../components/Icons/Download";
+import { useCustomNavigate } from "../../hooks/useCustomNavigate";
 import { useDownload } from "../../hooks/useDownload";
 import { Icon } from "@iconify/react";
 import Highlights from "../../components/ProjetosDestaque";
@@ -10,6 +11,7 @@ export default function Home() {
 
     const [user, setUser] = useState("");
     const { downloadFile } = useDownload();
+    const { ToGo } = useCustomNavigate();
     
     useEffect(() => { 
         fetch("https://api.github.com/users/Freitas024")
@@ -93,7 +95,7 @@ export default function Home() {
             <ProjectContainer>
                 <h4>Projetos principais</h4>
                 <Highlights />
-                <button>Veja Mais ...</button>
+                <button onClick={() => ToGo('/works')}>Veja Mais ...</button>
             </ProjectContainer>
         </HomeContainer>
     )
