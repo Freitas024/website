@@ -29,14 +29,15 @@ export const ProfileContainer = styled.div`
         flex-direction: column;
 
         h3 {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: "Alegreya", serif;
             font-size: large;
             font-weight: 700;
         }
 
         p {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: "Montserrat", sans-serif;
             font-style: italic;
+            font-size: small;
             color: #7543fe;
         }
      }
@@ -46,15 +47,15 @@ export const InfoContainer = styled.div`
     width: 36%;
     
     h4 {
-        font-family: 'Courier New', Courier, monospace;
+        font-family: "Alegreya SC", serif;
         font-size: larger;
         font-weight: bolder;
     }
 
     p {
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: 500;
-        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        font-size: small;
         text-align: justify;
         line-height: 1.5;
 
@@ -78,8 +79,9 @@ export const InfoContainer = styled.div`
         cursor: pointer;
 
         h3 {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-size: small;
             font-weight: 500;
         }
     }
@@ -103,8 +105,9 @@ export const InfoContainer = styled.div`
             cursor: pointer;
 
             h3 {
-                font-family: 'Courier New', Courier, monospace;
-                font-size: 14px;
+                font-family: 'Montserrat', sans-serif;
+                font-style: italic;
+                font-size: small;
                 font-weight: 500;
             }
         }
@@ -128,9 +131,9 @@ export const InfoContainer = styled.div`
             white-space: nowrap;   
 
             h3 {
-                font-family: 'Courier New', Courier, monospace;
-                font-size: 14px;
-                font-weight: 500;
+                font-family: "Alegreya SC", serif;
+                font-size: larger;
+                font-weight: bolder;
             }
         }
 
@@ -148,16 +151,21 @@ export const ProjectContainer = styled.div `
     width: 36%;
 
     h4 {
-        font-family: 'Courier New', Courier, monospace;
+        font-family: "Alegreya SC", serif;
         font-size: larger;
         font-weight: bolder;
         width: 100%;
+        margin-top: 72px;
     }
 
-    p {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: end;
+    button {
+        background: none;
+        border: none;
+        margin: 12px 0px 24px 0px;
+        padding: 12px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: small;
+        font-weight: 400;
+        color: #7543fe;
     }
 `;

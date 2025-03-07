@@ -14,22 +14,33 @@ export const Wrapper = styled.main `
         width: 36rem;
 
         padding: 18px;
-        margin: 0px 0px 30px 0px;
+        margin: 30px 0px 0px 0px;
 
         list-style: none;
         
 
-        a {
+        strong {
+            font-family: 'Montserrat', sans-serif;
             color: #7543fe;
+            font-style: italic;
+            font-size: 15px;
+        }
+
+        a {
+            font-family: 'Montserrat', sans-serif;
+            color: #7543fe;
+            font-style: italic;
+            font-size: small;
             text-decoration: none;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: medium;
         }
 
         p {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: small;
+            font-style: italic;
             font-weight: 400;
+            margin: 12px 0px;
+
         }
     }
 `

@@ -93,6 +93,7 @@ export default function Home() {
             <ProjectContainer>
                 <h4>Projetos principais</h4>
                 <Highlights />
+                <button>Veja Mais ...</button>
             </ProjectContainer>
         </HomeContainer>
     )

@@ -24,10 +24,9 @@ export default function ProjetosDestaque() {
                     repos.length > 0 ? (
                         repos.map((repo, index) => (
                             <li key={index}>
-                                <a href={repo.url} target="_blank">
-                                    <strong>{repo.name}</strong>
-                                </a>
+                                <strong>{repo.name}</strong>
                                 <p>{repo.description}</p>
+                                <a href={repo.url} target='_blank'>Veja o codigo</a>
                             </li>
                         ))
                     ) : <p>Carregando projetos ...</p>
