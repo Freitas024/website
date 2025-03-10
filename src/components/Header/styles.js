@@ -8,6 +8,7 @@ export const HeaderContainer = styled.main`
     padding: 0 250px;
     h2 {
         color: #7543fe;
+        cursor: pointer;
     }
     div {
         padding: 2px;

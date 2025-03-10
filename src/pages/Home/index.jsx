@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import { HomeContainer, ProfileContainer, InfoContainer, ProjectContainer } from "./styles";
+import { HomeContainer, ProfileContainer, InfoContainer, ProjectContainer, Footer } from "./styles";
 import { Check } from "../../components/Icons/check";
 import { Download } from "../../components/Icons/Download";
+import { AppInsta } from "../../components/Icons/AppInsta";
+import { AppLinkedin } from "../../components/Icons/AppLinkedin";
 import { useCustomNavigate } from "../../hooks/useCustomNavigate";
 import { useDownload } from "../../hooks/useDownload";
 import { Icon } from "@iconify/react";
@@ -97,6 +99,19 @@ export default function Home() {
                 <Highlights />
                 <button onClick={() => ToGo('/works')}>Veja Mais ...</button>
             </ProjectContainer>
+            <Footer>
+                <h2>viux</h2>
+                <ul>
+                    <li>
+                        <AppInsta />
+                        @ux_vini
+                    </li>
+                    <li>
+                        <AppLinkedin />
+                        ViniciusFreitas
+                    </li>
+                </ul>
+            </Footer>
         </HomeContainer>
     )
 }

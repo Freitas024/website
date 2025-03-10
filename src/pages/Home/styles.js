@@ -172,3 +172,30 @@ export const ProjectContainer = styled.div `
         
     }
 `;
+
+export const Footer = styled.footer`
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 8rem;
+
+    ul {
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+
+        li {
+            font-family: 'Montserrat', sans-serif;
+            font-size: small;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            color: #7543fe;
+        }
+    }
+`;

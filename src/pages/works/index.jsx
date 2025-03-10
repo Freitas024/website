@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Wrapper, Ul } from "./styles";
+import { useCustomNavigate } from "../../hooks/useCustomNavigate";
 
 export default function Works() {
 
     const [ repos, setRepos ] = useState([]);
+    const { ToGo } = useCustomNavigate();
 
     const handleFetch = async () => {
         try {
