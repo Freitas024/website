@@ -181,13 +181,27 @@ export const Footer = styled.footer`
     width: 100%;
     height: 8rem;
 
+    box-shadow: ${({theme}) => theme.shadow};
+
+    h2 {
+        color: #7543fe;
+    }
     ul {
         height: 100%;
+        width: 12rem;
 
         display: flex;
         align-items: center;
         justify-content: space-around;
-        flex-direction: column;
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: small;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            color: #FFF;
+        }
 
         li {
             font-family: 'Montserrat', sans-serif;
