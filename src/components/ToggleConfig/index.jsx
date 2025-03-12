@@ -6,6 +6,8 @@ export default function ToggleConfig({setIsDarkTheme}) {
       <Wrapper>
         <li>
           <h4>Trocar tema</h4>
+          <div onClick={() => setIsDarkTheme(true)}>Dark Mode</div>
+          <div onClick={() => setIsDarkTheme(false)}>Light Mode</div>
         </li>
     </Wrapper>
     )

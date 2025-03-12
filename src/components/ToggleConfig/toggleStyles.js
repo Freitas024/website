@@ -21,7 +21,7 @@ export const Wrapper = styled.ul`
     flex-direction: column;
 
     width: 18rem;
-    height: 24rem;
+    height: 12rem;
 
     background-color: ${({ theme }) => theme.body};
     box-shadow: ${({theme}) => theme.shadow};
@@ -43,6 +43,18 @@ export const Wrapper = styled.ul`
         margin: 12px 0px;
         border-radius: 6px;
         list-style-type: none;
+
+        div {
+            width: 90%;
+            padding: 12px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+
+            &:hover {
+                background: ${({theme}) => theme.hover};
+            }
+        }
     }
 
     animation: ${({toggle}) => (toggle ? "none  " : slideDown)} 0.6s ease-out;

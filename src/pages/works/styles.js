@@ -52,7 +52,7 @@ export const Ul = styled.ul`
             font-size: small;
             font-weight: 500;
             font-style: italic;
-            color: #FFF;
+            color: ${({theme}) => theme.text};
             margin: 12px 0px;
         }
         ol {
