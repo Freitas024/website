@@ -102,9 +102,8 @@ export default function Home() {
             <Footer>
                 <h2>viux</h2>
                 <ul>
-                    <h3>Redes Sociais</h3>
                     <li>
-                        <a href="https://www.linkedin.com/in/vinicius-de-freitas-e-silva-137a02295/" target="_blank">
+                        <a href="https://www.instagram.com/ux_vini?utm_source=qr&igsh=MXB4eHZuNmd0NHR1dA==" target="_blank">
                             <AppInsta />
                         </a>
                     </li>
