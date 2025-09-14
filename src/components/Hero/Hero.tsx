@@ -1,7 +1,11 @@
+import { HeroContent } from "./style"
+import HeroInfo from "../../components/HeroInfo/HeroInfo"
+
 export default function Hero(){
     return(
-        <main>
-            <h2>Criando experiências digitais, do pixel ao código</h2>
-        </main>
+        <HeroContent>
+            <HeroInfo />
+            <HeroInfo />
+        </HeroContent>
     )
 }
