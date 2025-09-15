@@ -10,6 +10,6 @@ export const theme = {
     danger: "#dc3545",
   },
   fonts: {
-    primary: "Nunito, sans-serif",
+    primary: "Montserrat, sans-serif",
   },
 };

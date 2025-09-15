@@ -7,6 +7,6 @@ export const HeroContent = styled.main `
     padding: 2rem;
 
     width: 100vw;
-    max-width: 1200px;
+    max-width: 1250px;
 
 `;
