@@ -5,7 +5,6 @@ export default function Hero(){
     return(
         <HeroContent>
             <HeroInfo />
-            <HeroInfo />
         </HeroContent>
     )
 }

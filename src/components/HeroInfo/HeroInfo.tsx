@@ -1,6 +1,6 @@
 import { HeroInfoContent, TextContent, SubText } from "./style";
 import Tag from "../Tag/Tag";
-import { Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react"
 import Button from "../Button/Button"
 
 export default function HeroInfo() {
