@@ -12,6 +12,7 @@
   "dependencies": {
     "@iconify/react": "^5.2.0",
     "@lottiefiles/react-lottie-player": "^3.5.3",
+    "@vercel/speed-insights": "^1.2.0",
     "emailjs-com": "^3.2.0",
     "lucide-react": "^0.477.0",
     "ngrok": "^5.0.0-beta.2",
