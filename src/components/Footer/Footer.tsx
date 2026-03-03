@@ -12,7 +12,7 @@ export default function Footer() {
                         href="#hero"
                         className="text-2xl font-bold bg-gradient-to-r from-[#a78bfa] to-[#7c3aed] text-transparent bg-clip-text mb-2 transition-opacity hover:opacity-80"
                     >
-                        DevPortfolio
+                        Vinicius Freitas
                     </a>
                     <p className="text-sm text-slate-400">
                         Full Stack Developer & Automation Specialist
@@ -48,7 +48,7 @@ export default function Footer() {
             {/* Bottom: Tech Stack */}
             <div className="pt-8 border-t border-white/[0.08] text-center">
                 <p className="text-xs text-slate-500">
-                    Desenvolvido com React, TypeScript, Three.js e Tailwind CSS
+                    Desenvolvido por Vinicius Freitas
                 </p>
             </div>
         </footer>
