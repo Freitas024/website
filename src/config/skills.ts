@@ -4,11 +4,11 @@ export interface Skill {
 }
 
 export const skills: Skill[] = [
-    { name: "TypeScript", category: "Languages" },
-    { name: "Node.js", category: "Backend" },
     { name: "React / Next.js", category: "Frontend" },
-    { name: "PostgreSQL", category: "Database" },
-    { name: "n8n", category: "Automation" },
-    { name: "APIs REST", category: "Integration" },
-    { name: "Docker", category: "DevOps" },
+    { name: "TypeScript", category: "Languages" },
+    { name: "Tailwind CSS", category: "Styling" },
+    { name: "HTML/CSS Semântico", category: "Frontend" },
+    { name: "Figma", category: "Design" },
+    { name: "Design System", category: "UI/UX" },
+    { name: "Prototipação", category: "UI/UX" },
 ];

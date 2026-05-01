@@ -34,6 +34,7 @@ export default function Projects() {
                             link={project.link}
                             github={project.github}
                             lottie={project.lottie}
+                            internalPage={project.internalPage}
                         />
                     ))}
                 </div>

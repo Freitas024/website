@@ -24,15 +24,15 @@ export default function Hero() {
 
                 {/* Heading */}
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-white mb-6">
-                    Desenvolvedor de{" "}
-                    <span className="text-[#a78bfa]">Software</span>
+                    Desenvolvedor{" "}
+                    <span className="text-[#a78bfa]">Frontend & UI/UX</span>
                 </h1>
 
                 {/* Description */}
                 <p className="text-base sm:text-lg leading-relaxed text-slate-400 max-w-xl mb-10">
-                    Especializado em automação de processos, integrações complexas e
-                    desenvolvimento de agentes de IA para transformar ideias em
-                    soluções escaláveis.
+                    Especializado em criar interfaces modernas, responsivas e com
+                    experiência excepcional do usuário. Do design ao código, transformo
+                    ideias em produtos digitais de alta qualidade.
                 </p>
 
                 {/* CTA buttons */}

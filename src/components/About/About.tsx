@@ -3,24 +3,24 @@ import { StatusBadge, FeatureCard } from "../ui";
 
 const features = [
     {
-        title: "Full Stack",
-        description: "Desenvolvimento completo com React, Node.js e PostgreSQL",
+        title: "Frontend Moderno",
+        description: "React, Next.js e TypeScript com foco em performance",
         icon: <Code size={22} />,
     },
     {
-        title: "SaaS & Cloud",
-        description: "Soluções escaláveis em arquiteturas serverless",
-        icon: <Cloud size={22} />,
-    },
-    {
-        title: "n8n Specialist",
-        description: "Automação avançada e workflows inteligentes",
+        title: "UI Design",
+        description: "Interfaces visuais limpas e consistentes",
         icon: <Settings size={22} />,
     },
     {
-        title: "APIs & Integrations",
-        description: "Conectando sistemas com APIs REST e webhooks",
+        title: "Design System",
+        description: "Componentes reutilizáveis e documentação",
         icon: <Zap size={22} />,
+    },
+    {
+        title: "UX & Acessibilidade",
+        description: "Experiências intuitivas e acessíveis (WCAG)",
+        icon: <Cloud size={22} />,
     },
 ];
 
@@ -42,19 +42,18 @@ export default function About() {
 
                     <div className="space-y-5 text-base leading-relaxed text-slate-400">
                         <p>
-                            Com anos de experiência em desenvolvimento de software, meu foco
-                            está em criar soluções que realmente fazem a diferença nos
-                            processos de negócio.
+                            Com experiência em desenvolvimento frontend e design de
+                            interfaces, meu foco está em criar produtos digitais que unem
+                            estética, usabilidade e código de qualidade.
                         </p>
                         <p>
-                            Especializado em automação inteligente, desenvolvo desde
-                            integrações complexas entre sistemas até agentes de IA que
-                            otimizam operações e geram insights valiosos.
+                            Acredito que uma boa interface vai além do visual: precisa ser
+                            intuitiva, acessível e performática. Trabalho do design ao
+                            código para entregar experiências que os usuários amam usar.
                         </p>
                         <p>
-                            Cada projeto é uma oportunidade de aplicar as melhores práticas e
-                            tecnologias de ponta para entregar resultados que superam
-                            expectativas.
+                            Cada projeto é uma oportunidade de equilibrar design e técnica
+                            para entregar resultados que superam expectativas.
                         </p>
                     </div>
                 </div>

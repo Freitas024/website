@@ -1,5 +1,5 @@
 import { type ReactNode } from "react";
-import { Settings, Code, Plug, Bot } from "lucide-react";
+import { Layout, Code, Paintbrush, Sparkles } from "lucide-react";
 
 export interface Service {
     title: string;
@@ -10,51 +10,51 @@ export interface Service {
 
 export const services: Service[] = [
     {
-        title: "Automação de Processos",
+        title: "Desenvolvimento Frontend",
         description:
-            "Elimine tarefas repetitivas e ganhe eficiência com workflows automatizados usando n8n, Zapier ou soluções customizadas.",
-        icon: <Settings size={22} />,
-        highlights: [
-            "Automação de tarefas repetitivas",
-            "Workflows inteligentes",
-            "Sincronização de dados",
-            "Notificações automáticas",
-        ],
-    },
-    {
-        title: "Desenvolvimento Web",
-        description:
-            "Aplicações web modernas e responsivas, desde landing pages até sistemas SaaS complexos com tecnologias de ponta.",
+            "Sites e aplicações web modernas, responsivas e otimizadas, construídas com React, Next.js e as melhores práticas do mercado.",
         icon: <Code size={22} />,
         highlights: [
             "React / Next.js",
-            "Design responsivo",
+            "Totalmente responsivo",
             "Performance otimizada",
-            "SEO e acessibilidade",
+            "Código limpo e mantível",
         ],
     },
     {
-        title: "Integrações API",
+        title: "UI Design",
         description:
-            "Conecte diferentes sistemas e plataformas criando pontes de comunicação eficientes através de APIs REST e webhooks.",
-        icon: <Plug size={22} />,
+            "Criação de interfaces visuais limpas, modernas e consistentes que reforçam a identidade da sua marca e encantam os usuários.",
+        icon: <Paintbrush size={22} />,
         highlights: [
-            "APIs REST customizadas",
-            "Webhooks em tempo real",
-            "Integração multi-plataforma",
-            "Documentação completa",
+            "Design moderno e consistente",
+            "Identidade visual forte",
+            "Componentes reutilizáveis",
+            "Handoff para desenvolvimento",
         ],
     },
     {
-        title: "Agentes de IA",
+        title: "Redesign & Otimização",
         description:
-            "Desenvolvimento de assistentes inteligentes e chatbots com IA para automatizar atendimento, análise de dados e tomada de decisões.",
-        icon: <Bot size={22} />,
+            "Melhoria de interfaces existentes com foco em performance, acessibilidade e experiência do usuário (Core Web Vitals, WCAG).",
+        icon: <Layout size={22} />,
         highlights: [
-            "Chatbots inteligentes",
-            "Processamento de linguagem natural",
-            "Análise preditiva",
-            "Integração com GPT",
+            "Otimização de performance",
+            "Acessibilidade (WCAG)",
+            "Refatoração de código",
+            "Melhoria de UX",
+        ],
+    },
+    {
+        title: "Prototipação",
+        description:
+            "Do wireframe ao protótipo interativo no Figma, validando ideias e fluxos antes do desenvolvimento para economizar tempo e recursos.",
+        icon: <Sparkles size={22} />,
+        highlights: [
+            "Wireframes e mockups",
+            "Protótipos interativos",
+            "Figma → Código",
+            "Validação de conceitos",
         ],
     },
 ];

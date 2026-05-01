@@ -14,6 +14,7 @@ interface ProjectCardProps {
     link: string;
     github?: string;
     lottie?: string;
+    internalPage?: boolean;
     className?: string;
 }
 
@@ -25,6 +26,7 @@ export default function ProjectCard({
     link,
     github,
     lottie,
+    internalPage,
     className = "",
 }: ProjectCardProps) {
     return (
@@ -76,9 +78,9 @@ export default function ProjectCard({
                 {/* Actions */}
                 <div className="mt-auto flex gap-2">
                     <a
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={internalPage ? `/projetos/${title.toLowerCase()}` : link}
+                        target={internalPage ? undefined : "_blank"}
+                        rel={internalPage ? undefined : "noopener noreferrer"}
                         className="
               flex-1 inline-flex items-center justify-center gap-2
               py-3 rounded-lg
