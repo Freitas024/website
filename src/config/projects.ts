@@ -20,11 +20,4 @@ export const projects: Project[] = [
         github: "https://github.com/Freitas024/Budgy",
         internalPage: true,
     },
-    {
-        title: "Em breve...",
-        description: "Novo projeto em desenvolvimento. Fique ligado!",
-        lottie: "/animations/construction.json",
-        tags: ["Em breve"],
-        link: "#",
-    },
 ];
