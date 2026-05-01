@@ -6,7 +6,6 @@ export default function Footer() {
     return (
         <footer className="relative border-t border-white/[0.08] bg-[#0a0a0f] pt-16 pb-8 px-6 md:px-16 lg:px-24 xl:px-32">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-                {/* Left: Logo and Title */}
                 <div className="flex flex-col items-center md:items-start text-center md:text-left">
                     <a
                         href="#hero"
@@ -15,11 +14,10 @@ export default function Footer() {
                         Vinicius Freitas
                     </a>
                     <p className="text-sm text-slate-400">
-                        Full Stack Developer & Automation Specialist
+                        Frontend Developer & UI/UX Specialist
                     </p>
                 </div>
 
-                {/* Center: Navigation Links */}
                 <nav className="flex flex-wrap justify-center gap-6 text-sm font-medium text-slate-300">
                     <a href="#sobre" className="hover:text-[#a78bfa] transition-colors">
                         Sobre
@@ -38,14 +36,12 @@ export default function Footer() {
                     </a>
                 </nav>
 
-                {/* Right: Copyright */}
                 <div className="flex items-center gap-2 text-sm text-slate-400">
                     <span>&copy; {currentYear} Feito com</span>
                     <Heart size={14} className="text-[#a78bfa] fill-[#a78bfa]" />
                 </div>
             </div>
 
-            {/* Bottom: Tech Stack */}
             <div className="pt-8 border-t border-white/[0.08] text-center">
                 <p className="text-xs text-slate-500">
                     Desenvolvido por Vinicius Freitas
