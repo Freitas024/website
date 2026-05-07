@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { StatusBadge } from "../ui";
 import { ServiceCard } from "../ui";
 import { services } from "../../config/services";
@@ -10,7 +13,13 @@ export default function Services() {
         >
             <div className="max-w-7xl mx-auto">
                 {/* Header — centered */}
-                <div className="text-center mb-16">
+                <motion.div 
+                    className="text-center mb-16"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                >
                     <StatusBadge label="Serviços" className="mb-6" />
 
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-4">
@@ -21,18 +30,25 @@ export default function Services() {
                         Soluções completas de tecnologia para automatizar, integrar e
                         escalar seu negócio
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Services grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {services.map((service) => (
-                        <ServiceCard
+                    {services.map((service, index) => (
+                        <motion.div
                             key={service.title}
-                            icon={service.icon}
-                            title={service.title}
-                            description={service.description}
-                            highlights={service.highlights}
-                        />
+                            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+                        >
+                            <ServiceCard
+                                icon={service.icon}
+                                title={service.title}
+                                description={service.description}
+                                highlights={service.highlights}
+                            />
+                        </motion.div>
                     ))}
                 </div>
             </div>

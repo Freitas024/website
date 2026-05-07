@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { StatusBadge, ContactCard } from "../ui";
 import { contacts } from "../../config/contacts";
@@ -10,7 +13,13 @@ export default function Contatos() {
         >
             <div className="max-w-4xl mx-auto">
                 {/* Header — centered */}
-                <div className="text-center mb-16">
+                <motion.div 
+                    className="text-center mb-16"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                >
                     <StatusBadge label="Contato" className="mb-6" />
 
                     <h2 className="text-3xl sm:text-4xl font-bold leading-tight tracking-tight text-white mb-4">
@@ -20,10 +29,16 @@ export default function Contatos() {
                     <p className="text-base leading-relaxed text-slate-400 max-w-xl mx-auto">
                         Estou sempre aberto para discutir novos projetos, ideias criativas ou oportunidades de parceria.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Card CTA Principal */}
-                <div className="relative rounded-2xl overflow-hidden bg-white/[0.02] border border-[#7c3aed]/20 p-8 md:p-12 text-center mb-8">
+                <motion.div 
+                    className="relative rounded-2xl overflow-hidden bg-white/[0.02] border border-[#7c3aed]/20 p-8 md:p-12 text-center mb-8"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                >
                     <div className="absolute inset-0 bg-gradient-to-br from-[#7c3aed]/5 to-transparent pointer-events-none" />
 
                     <div className="relative z-10">
@@ -41,19 +56,26 @@ export default function Contatos() {
                             Iniciar Conversa
                         </a>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Cards de contato menores */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {contacts.map((contact) => (
-                        <ContactCard
+                    {contacts.map((contact, index) => (
+                        <motion.div
                             key={contact.name}
-                            name={contact.name}
-                            value={contact.value}
-                            link={contact.link}
-                            icon={contact.icon}
-                            colorClass={contact.colorClass}
-                        />
+                            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+                        >
+                            <ContactCard
+                                name={contact.name}
+                                value={contact.value}
+                                link={contact.link}
+                                icon={contact.icon}
+                                colorClass={contact.colorClass}
+                            />
+                        </motion.div>
                     ))}
                 </div>
             </div>

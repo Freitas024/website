@@ -1,4 +1,7 @@
+"use client";
+
 import { Code, Cloud, Settings, Zap } from "lucide-react";
+import { motion } from "framer-motion";
 import { StatusBadge, FeatureCard } from "../ui";
 
 const features = [
@@ -32,7 +35,13 @@ export default function About() {
         >
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 md:gap-20">
                 {/* Left: Text content */}
-                <div className="flex-1 max-w-lg">
+                <motion.div 
+                    className="flex-1 max-w-lg"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                >
                     <StatusBadge label="Sobre Mim" className="mb-8" />
 
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-8">
@@ -56,17 +65,24 @@ export default function About() {
                             para entregar resultados que superam expectativas.
                         </p>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Right: Feature cards grid */}
                 <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4 content-center">
-                    {features.map((feature) => (
-                        <FeatureCard
+                    {features.map((feature, index) => (
+                        <motion.div
                             key={feature.title}
-                            icon={feature.icon}
-                            title={feature.title}
-                            description={feature.description}
-                        />
+                            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+                        >
+                            <FeatureCard
+                                icon={feature.icon}
+                                title={feature.title}
+                                description={feature.description}
+                            />
+                        </motion.div>
                     ))}
                 </div>
             </div>
