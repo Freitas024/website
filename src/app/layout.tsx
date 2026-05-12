@@ -1,37 +1,34 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bebas_Neue, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "../styles/globals.css";
+import { Loading } from "../components/Loading";
+import { Cursor } from "../components/Cursor";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bebasNeue = Bebas_Neue({
+  weight: "400",
   subsets: ["latin"],
+  variable: "--font-bebas",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSans = DM_Sans({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
+  variable: "--font-dmsans",
 });
 
-
+const jetbrainsMono = JetBrains_Mono({
+  weight: ["400", "500"],
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+});
 
 export const metadata: Metadata = {
-  title: "Vinicius Freitas | Desenvolvedor de Software",
-  description:
-    "Especializado em automação de processos, integrações complexas e desenvolvimento de agentes de IA para transformar ideias em soluções escaláveis.",
-  keywords: [
-    "desenvolvedor",
-    "software",
-    "automação",
-    "integrações",
-    "agentes de IA",
-    "fullstack",
-    "React",
-    "Next.js",
-  ],
+  title: "Vinicius Freitas | Frontend Developer & UI/UX",
+  description: "Transformo complexidade em simplicidade. Frontend Developer & UI/UX Designer.",
+  keywords: ["desenvolvedor", "frontend", "UI/UX", "React", "Next.js", "TypeScript"],
   openGraph: {
-    title: "Vinicius Freitas | Desenvolvedor de Software",
-    description:
-      "Especializado em automação de processos, integrações complexas e desenvolvimento de agentes de IA.",
+    title: "Vinicius Freitas | Frontend Developer & UI/UX",
+    description: "Transformo complexidade em simplicidade.",
     type: "website",
     locale: "pt_BR",
   },
@@ -43,10 +40,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html
+      lang="pt-BR"
+      className={`${bebasNeue.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
+    >
+      <body className="antialiased">
+        <Loading />
+        <Cursor />
         {children}
       </body>
     </html>

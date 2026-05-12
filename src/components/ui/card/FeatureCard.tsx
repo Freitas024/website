@@ -16,7 +16,7 @@ export default function FeatureCard({
     return (
         <div
             className={`
-        group rounded-xl p-6
+        group rounded-xl p-6 h-full
         bg-white/[0.03] border border-white/[0.08]
         hover:bg-white/[0.06] hover:border-[#7c3aed]/30
         transition-all duration-300

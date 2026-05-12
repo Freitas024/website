@@ -1,84 +1,143 @@
 "use client";
 
+import { useRef } from "react";
 import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
-import { StatusBadge, ContactCard } from "../ui";
+import { Phone, MessageCircle, Mail } from "lucide-react";
+import { Linkedin, Github } from "lucide-react";
 import { contacts } from "../../config/contacts";
 
-export default function Contatos() {
-    return (
-        <section
-            id="contatos"
-            className="relative py-24 md:py-32 px-6 md:px-16 lg:px-24 xl:px-32"
+const CONTACT_ICONS: Record<string, React.ComponentType<{ size?: number; strokeWidth?: number }>> = {
+  WhatsApp: MessageCircle,
+  LinkedIn: Linkedin,
+  GitHub: Github,
+  Email: Mail,
+};
+
+const reveal = {
+  hidden: { opacity: 0, y: 36 },
+  visible: (delay = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.7, delay } }),
+};
+
+export default function Contato() {
+  const btnRef = useRef<HTMLAnchorElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
+
+  const handleMagneticMove = (e: React.MouseEvent) => {
+    const btn = btnRef.current;
+    if (!btn) return;
+    const r = btn.getBoundingClientRect();
+    const cx = r.left + r.width / 2;
+    const cy = r.top + r.height / 2;
+    const dx = e.clientX - cx;
+    const dy = e.clientY - cy;
+    const d = Math.hypot(dx, dy);
+    if (d < 90) {
+      const f = (90 - d) / 90;
+      btn.style.transform = `translate(${dx * f * 0.33}px, ${dy * f * 0.33}px)`;
+    }
+  };
+
+  const handleMagneticLeave = () => {
+    if (btnRef.current) btnRef.current.style.transform = "";
+  };
+
+  return (
+    <section
+      id="contact"
+      aria-label="Contato"
+      className="bg-bg text-center px-14 py-[120px] max-md:px-6 max-md:py-20"
+    >
+      <motion.p
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={reveal}
+        className="font-mono text-[11px] text-primary tracking-[0.18em] uppercase mb-[14px]"
+      >
+        # Contato
+      </motion.p>
+
+      <motion.h2
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={reveal}
+        custom={0.1}
+        className="font-display text-[clamp(64px,11vw,148px)] leading-[0.9] tracking-[0.03em] mb-[22px]"
+      >
+        VAMOS<br />CONVERSAR?
+      </motion.h2>
+
+      <motion.p
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={reveal}
+        custom={0.2}
+        className="text-[17px] text-muted font-light max-w-[440px] mx-auto mb-11 leading-[1.6]"
+      >
+        Você tem uma ideia para discutir, algum projeto, deseja conhecer ou oportunidades de
+        parceria.
+      </motion.p>
+
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={reveal}
+        custom={0.3}
+        ref={wrapRef}
+        onMouseMove={handleMagneticMove}
+        onMouseLeave={handleMagneticLeave}
+        className="inline-block mb-[72px]"
+      >
+        <a
+          ref={btnRef}
+          href="https://wa.me/5584994821342"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Iniciar conversa"
+          className="inline-flex items-center gap-2.5 bg-primary text-foreground font-body text-[15px] font-medium px-[38px] py-[17px] rounded-[50px] transition-[background,box-shadow] duration-200 hover:bg-[#6d28d9] hover:shadow-[0_14px_44px_rgba(124,58,237,0.52)] will-change-transform"
         >
-            <div className="max-w-4xl mx-auto">
-                {/* Header — centered */}
-                <motion.div 
-                    className="text-center mb-16"
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                >
-                    <StatusBadge label="Contato" className="mb-6" />
+          <Phone size={17} />
+          Iniciar Conversa
+        </a>
+      </motion.div>
 
-                    <h2 className="text-3xl sm:text-4xl font-bold leading-tight tracking-tight text-white mb-4">
-                        Vamos Conversar?
-                    </h2>
-
-                    <p className="text-base leading-relaxed text-slate-400 max-w-xl mx-auto">
-                        Estou sempre aberto para discutir novos projetos, ideias criativas ou oportunidades de parceria.
-                    </p>
-                </motion.div>
-
-                {/* Card CTA Principal */}
-                <motion.div 
-                    className="relative rounded-2xl overflow-hidden bg-white/[0.02] border border-[#7c3aed]/20 p-8 md:p-12 text-center mb-8"
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                >
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#7c3aed]/5 to-transparent pointer-events-none" />
-
-                    <div className="relative z-10">
-                        <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">Pronto para começar seu projeto?</h3>
-                        <p className="text-slate-400 mb-8 max-w-xl mx-auto">
-                            Entre em contato e vamos transformar suas ideias em realidade. Respondo o mais rápido possível.
-                        </p>
-                        <a
-                            href="https://wa.me/5584994821342"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-[#7c3aed] hover:bg-[#6d28d9] transition-colors text-white font-medium rounded-lg"
-                        >
-                            <MessageCircle size={18} />
-                            Iniciar Conversa
-                        </a>
-                    </div>
-                </motion.div>
-
-                {/* Cards de contato menores */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {contacts.map((contact, index) => (
-                        <motion.div
-                            key={contact.name}
-                            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-                        >
-                            <ContactCard
-                                name={contact.name}
-                                value={contact.value}
-                                link={contact.link}
-                                icon={contact.icon}
-                                colorClass={contact.colorClass}
-                            />
-                        </motion.div>
-                    ))}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={reveal}
+        custom={0.4}
+        className="grid grid-cols-2 gap-3.5 max-w-[580px] mx-auto max-md:grid-cols-1"
+      >
+        {contacts.map((contact) => {
+          const Icon = CONTACT_ICONS[contact.name];
+          return (
+            <a
+              key={contact.name}
+              href={contact.link}
+              target={contact.name !== "WhatsApp" ? "_blank" : undefined}
+              rel={contact.name !== "WhatsApp" ? "noopener noreferrer" : undefined}
+              aria-label={`${contact.name} — ${contact.value}`}
+              className="bg-bg-card border border-border rounded-xl px-[22px] py-[18px] flex items-center gap-3.5 text-left transition-[border-color,transform] duration-200 hover:border-primary/40 hover:-translate-y-0.5"
+            >
+              <div className="w-10 h-10 bg-primary/[0.12] rounded-[10px] flex items-center justify-center shrink-0 text-accent">
+                {Icon && <Icon size={19} strokeWidth={1.5} />}
+              </div>
+              <div>
+                <div className="font-mono text-[10px] text-primary tracking-[0.12em] uppercase mb-1">
+                  {contact.name}
                 </div>
-            </div>
-        </section>
-    );
+                <div className="text-[13px] text-foreground font-medium">
+                  {contact.value.length > 28 ? contact.value.slice(0, 28) + "…" : contact.value}
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </motion.div>
+    </section>
+  );
 }
