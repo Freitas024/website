@@ -6,7 +6,7 @@ import { X, ExternalLink, ArrowRight } from "lucide-react";
 import { projects, type Project } from "../../config/projects";
 
 function ProjectModal({ project, onClose }: { project: Project; onClose: () => void }) {
-  const [lightboxBg, setLightboxBg] = useState<string | null>(null);
+  const [lightbox, setLightbox] = useState<{ bg: string; image?: string } | null>(null);
 
   return (
     <>
@@ -56,39 +56,24 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
                     role="button"
                     tabIndex={0}
                     aria-label={item.label}
-                    onClick={() => setLightboxBg(item.bg)}
-                    onKeyDown={(e) => { if (e.key === "Enter") setLightboxBg(item.bg); }}
+                    onClick={() => setLightbox({ bg: item.bg, image: item.image })}
+                    onKeyDown={(e) => { if (e.key === "Enter") setLightbox({ bg: item.bg, image: item.image }); }}
                     className={`aspect-[16/10] rounded-lg overflow-hidden flex items-center justify-center transition-[filter,transform] duration-200 hover:brightness-125 hover:scale-[1.02] ${i === 0 ? "col-span-2 max-md:col-span-1" : ""}`}
                     style={{ background: item.bg }}
                   >
-                    <span className="font-mono text-[10.5px] text-foreground/40 tracking-[0.1em]">
-                      {item.label}
-                    </span>
+                    {item.image ? (
+                      <img
+                        src={item.image}
+                        alt={item.label}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <span className="font-mono text-[10.5px] text-foreground/40 tracking-[0.1em]">
+                        {item.label}
+                      </span>
+                    )}
                   </div>
                 ))}
-              </div>
-            </div>
-
-            <div className="py-7 border-b border-border">
-              <div className="font-mono text-[10.5px] text-primary tracking-[0.18em] uppercase mb-[18px]">
-                // Demonstração do Projeto em Funcionamento
-              </div>
-              <div className="rounded-xl overflow-hidden border border-border bg-bg">
-                <div className="aspect-video bg-gradient-to-br from-[#1a083a] to-[#0a0a0f] flex flex-col items-center justify-center gap-3.5">
-                  <div
-                    role="button"
-                    aria-label="Reproduzir demonstração"
-                    className="w-[62px] h-[62px] bg-primary/[0.18] border-2 border-primary rounded-full flex items-center justify-center transition-[background,transform] duration-200 hover:bg-primary/[0.38] hover:scale-110"
-                  >
-                    <div
-                      aria-hidden="true"
-                      className="w-0 h-0 border-solid border-[9px_0_9px_16px] border-transparent border-l-accent ml-1"
-                    />
-                  </div>
-                  <p className="font-mono text-[11px] text-muted tracking-[0.1em]">
-                    [vídeo de demonstração do projeto]
-                  </p>
-                </div>
               </div>
             </div>
 
@@ -164,7 +149,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
       </div>
 
       <AnimatePresence>
-        {lightboxBg && (
+        {lightbox && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -173,13 +158,21 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
             role="dialog"
             aria-modal="true"
             aria-label="Visualizar imagem"
-            onClick={() => setLightboxBg(null)}
+            onClick={() => setLightbox(null)}
             className="fixed inset-0 z-[3000] bg-black/[0.96] flex items-center justify-center"
           >
             <div
-              className="w-[80vw] max-w-[960px] aspect-[16/10] rounded-[10px]"
-              style={{ background: lightboxBg }}
-            />
+              className="w-[80vw] max-w-[960px] aspect-[16/10] rounded-[10px] overflow-hidden"
+              style={{ background: lightbox.bg }}
+            >
+              {lightbox.image && (
+                <img
+                  src={lightbox.image}
+                  alt="Screenshot ampliado"
+                  className="w-full h-full object-contain"
+                />
+              )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

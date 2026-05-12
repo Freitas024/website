@@ -8,7 +8,6 @@ const TYPING_LINES = [
   "// Frontend Developer & UI/UX specialist",
   "// React · Next.js · TypeScript",
   "// Design to Code",
-  "// Interfaces that matter",
 ];
 
 export default function Hero() {

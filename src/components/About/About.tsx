@@ -12,8 +12,7 @@ const MINI_SERVICES = [
 
 const STATS = [
   { n: "3", suffix: "+", label: "Anos exp." },
-  { n: "20", suffix: "+", label: "Projetos" },
-  { n: "15", suffix: "+", label: "Clientes" },
+  { n: "5", suffix: "+", label: "Projetos" },
 ];
 
 const reveal = {
