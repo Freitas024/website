@@ -27,7 +27,7 @@ export const projects: Project[] = [
     sub: "Dashboard financeiro para pequenas empresas",
     description:
       "Dashboard financeiro completo para pequenas empresas com relatórios gerenciais, gráficos customizados e gestão de finanças de forma simples e intuitiva.",
-    image: "/projects/budgy-dashboard.png",
+    image: "/projects/budgy/Screenshot_2026-05-12_08-16-55.png",
     tags: ["React", "TypeScript", "Tailwind CSS", "UI/UX", "Responsive Design"],
     link: "https://budgy-gamma.vercel.app/",
     github: "https://github.com/Freitas024/Budgy",
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     sub: "App de finanças pessoais automatizado",
     description:
       "App de finanças pessoais automatizado para o dia a dia. Gerencie suas contas com inteligência — insights e dados da sua carteira sem análise manual.",
-    image: "/projects/budgy-finance.png",
+    image: "/projects/budgy-finance/Screenshot_2026-05-12_09-34-26.png",
     tags: ["React", "TypeScript", "Next.js", "UI/UX"],
     link: "https://budgy-finance.vercel.app/login",
     github: "https://github.com/Freitas024/budgy-finance.git",
