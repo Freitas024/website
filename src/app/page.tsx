@@ -2,6 +2,7 @@ import { Navbar } from "../components/Navbar";
 import { Hero } from "../components/Hero";
 import { TechMarquee } from "../components/ui";
 import { About } from "../components/About";
+import { Experience } from "../components/experience";
 import { Projects } from "../components/Projects";
 import { Services } from "../components/Services";
 import { Contato } from "../components/Contatos";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <TechMarquee />
       <About />
+      <Experience />
       <Projects />
       <Services />
       <Contato />
